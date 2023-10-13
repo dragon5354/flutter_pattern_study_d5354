@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pattern_study_d5354/src/mvc/views/mvc_view.dart';
+import 'package:flutter_pattern_study_d5354/src/mvvm/views/mvvm_view.dart';
 import 'package:flutter_pattern_study_d5354/src/normal/normal_view.dart';
 
 /*
@@ -34,7 +35,15 @@ class PatternHome extends StatelessWidget {
                 },
                 child: const Text('MVC PATTERN')),
             const SizedBox(height: 10),
-            const SizedBox(height: 10),
+            // mvvm 패턴
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => MVVMView()));
+                },
+                child: const Text('MVVM PATTERN')),
+            // const SizedBox(height: 10),
+            // mvvm + provider의 경우 provider를 써본 적이 없어서 생략함
             const SizedBox(height: 10),
             const SizedBox(height: 10),
             const SizedBox(height: 10),
