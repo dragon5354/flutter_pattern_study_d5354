@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_pattern_study_d5354/src/mvc/views/mvc_view.dart';
 import 'package:flutter_pattern_study_d5354/src/normal/normal_view.dart';
 
 /*
@@ -24,6 +25,19 @@ class PatternHome extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => NormalView()));
                 },
                 child: const Text('NO PATTERN')),
+            const SizedBox(height: 10),
+            // mvc 패턴
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => MVCView()));
+                },
+                child: const Text('MVC PATTERN')),
+            const SizedBox(height: 10),
+            const SizedBox(height: 10),
+            const SizedBox(height: 10),
+            const SizedBox(height: 10),
+            const SizedBox(height: 10),
           ],
         ),
       ),
